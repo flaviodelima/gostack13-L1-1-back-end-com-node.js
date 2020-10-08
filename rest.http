@@ -1,0 +1,17 @@
+#### ASDFASDF
+GET http://localhost:3333/
+
+### 
+PUT http://localhost:3333/projects/1
+
+### 
+DELETE http://localhost:3333/projects/1
+
+###
+POST http://localhost:3333/projects/5
+content-type: application/json
+
+{
+    "title": "App",
+    "owner":"Flavio"
+}
