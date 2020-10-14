@@ -1,17 +1,34 @@
 #### ASDFASDF
-GET http://localhost:3333/
-
-### 
-PUT http://localhost:3333/projects/1
-
-### 
-DELETE http://localhost:3333/projects/1
+GET http://localhost:3333/projects
 
 ###
-POST http://localhost:3333/projects/5
+GET http://localhost:3333/projects?title=React
+
+###
+POST http://localhost:3333/projects/
 content-type: application/json
 
 {
-    "title": "App",
+    "title": "React App",
     "owner":"Flavio"
 }
+
+### Invalid project ID (invalid uuid)
+PUT http://localhost:3333/projects/095e5d89-54d9-41c3-882b
+content-type: application/json
+
+{
+    "title": "Application",
+    "owner":"Flavio"
+}
+
+###
+PUT http://localhost:3333/projects/095e5d89-54d9-41c3-882b-73cfd08c3042
+content-type: application/json
+
+{
+    "title": "Application",
+    "owner":"Flavio"
+}
+### 
+DELETE http://localhost:3333/projects/095e5d89-54d9-41c3-882b-73cfd08c3042
